@@ -10,9 +10,6 @@ const form=document.querySelector('.form__body');
 const answerYes=document.querySelector('.answer--1');
 const date=document.querySelector('.comment__date');
 
-// let dateNow=new Date();
-// console.log(dateNow);
-
 
 function capitalize(cleanModifier) {
     return cleanModifier.replace(/(^|\s)\S/g, function(upperCase) {return upperCase.toUpperCase()})
@@ -79,10 +76,3 @@ function clear(evt) {
     pictureInput.value="";
     commentInput.value="";
     };
-
-// function putPicture() {
-//     if
-// else {
-//     avatar.src=pictureInput.value;
-// }
-// }
