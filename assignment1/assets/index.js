@@ -38,8 +38,8 @@ function getPicture(){
 }
 
 function choosePicture() {
-let picNumber=Math.random()*6|0;
-let randomPicture = (picNumber===0) ? 'https://cdn.fishki.net/upload/post/2017/08/31/2369165/wallpaper-strange-funny-weird-crazy-absurd-awesome-259.jpg':(picNumber===1) ? 'https://pix.avax.news/avaxnews/98/b7/0002b798.jpeg':(picNumber===2) ? 'https://zefirka.net/wp-content/uploads/2018/09/konkurs-samyx-smeshnyx-fotografij-zhivotnyx-2018-1.jpg':(picNumber===3) ? 'https://i.pinimg.com/originals/55/a6/20/55a62058b47af5222a44fdd6e70b02e1.jpg':(picNumber===4) ? 'https://zooblog.ru/uploads/posts/2014-10/1412669433_zhivotnye-sposobnye-ubit-1.jpg' : 'https://4tololo.ru/sites/default/files/images/20170811210729.jpg';
+const picNumber=Math.random()*6|0;
+const randomPicture = (picNumber===0) ? 'https://cdn.fishki.net/upload/post/2017/08/31/2369165/wallpaper-strange-funny-weird-crazy-absurd-awesome-259.jpg':(picNumber===1) ? 'https://pix.avax.news/avaxnews/98/b7/0002b798.jpeg':(picNumber===2) ? 'https://zefirka.net/wp-content/uploads/2018/09/konkurs-samyx-smeshnyx-fotografij-zhivotnyx-2018-1.jpg':(picNumber===3) ? 'https://i.pinimg.com/originals/55/a6/20/55a62058b47af5222a44fdd6e70b02e1.jpg':(picNumber===4) ? 'https://zooblog.ru/uploads/posts/2014-10/1412669433_zhivotnye-sposobnye-ubit-1.jpg' : 'https://4tololo.ru/sites/default/files/images/20170811210729.jpg';
 avatar.src=randomPicture;}
 
 function showDate() {
