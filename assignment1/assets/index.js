@@ -19,8 +19,8 @@ function checkName() {
     if (answerYes.checked===true) {
         const usernameValue=usernameInput.value;
         const modifier=usernameValue.toLowerCase();
-const cleanModifier=modifier.trim();
-username.textContent=capitalize(cleanModifier);
+        const cleanModifier=modifier.trim();
+        username.textContent=capitalize(cleanModifier);
     } else {
         username.textContent="username";
     }
@@ -56,23 +56,25 @@ function showDate() {
     date.textContent=`${dateNow.toLocaleString('ru', options)}`;
 }
 
-button.addEventListener('click', publishComment); 
-
 function publishComment() {
-    showDate();
+showDate();
 getPicture();
 checkName();
-const commentValue=commentInput.value;
-const filter = commentValue.replace(/viagra|XXX/ig, "***");
-comment.textContent=filter;
+filterText();
 chat.style.display='block';
 }
 
-button.addEventListener('click', clear); 
+function filterText() {
+    const commentValue=commentInput.value;
+    const filter = commentValue.replace(/viagra|XXX/ig, "***");
+    comment.textContent=filter;
+}
 
-function clear(evt) {
+function clear(evt) {   
     evt.preventDefault();
     usernameInput.value=""; 
     pictureInput.value="";
     commentInput.value="";
     };
+
+button.addEventListener('click', publishComment, clear(evt)); 
